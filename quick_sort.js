@@ -20,7 +20,7 @@ function quickSort(arr) {
 
         //遍历去除掉benchMark的数组,最小放左,等于或者最大放右
         arr.forEach((item, idx) => {
-        	console.log(item);
+        	// console.log(item);
             if (item < benchMark) {
                 leftArr.push(item);
             } else {
