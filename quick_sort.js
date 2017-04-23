@@ -1,5 +1,7 @@
 let arr = [16,2,24,63,4,5,2,17,31,96,50];
 
+
+
 function quickSort(arr) {
 	let arrLen = arr.length;
 
@@ -36,6 +38,13 @@ function quickSort(arr) {
     }
 }
 
-let sortedArr = quickSort(arr);
 
-console.log(sortedArr);
+let testArr = [];
+for (let i = 0, count = 0; i < 100000; i++) {
+    testArr[i] = parseInt(Math.random()*1000);
+}
+
+//测试排序所需耗时
+console.time('1');
+let sortedArr = quickSort(testArr);
+console.timeEnd('1');

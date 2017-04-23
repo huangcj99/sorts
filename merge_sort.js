@@ -48,6 +48,13 @@ function merge(leftArr,rightArr) {
     return result;
 }
 
-let newArr = mergeSort(defaultArr);
 
-console.log(newArr);
+let testArr = [];
+for (let i = 0, count = 0; i < 100000; i++) {
+    testArr[i] = parseInt(Math.random()*1000);
+}
+
+//测试排序所需耗时
+console.time('1');
+let newArr = mergeSort(testArr);
+console.timeEnd('1');
